@@ -1,0 +1,267 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>BrandSpark — Performance Marketing for Interiors</title>
+  <meta name="description" content="BrandSpark - Meta & Google Ads + Social Media Management for interior businesses. Founder: Priya Sharma. Contact: 7380311858" />
+  <style>
+    /* Palette & base */
+    :root{
+      --bg:#0e0f11;           /* page background */
+      --panel:#121316;        /* panels/cards */
+      --muted:#9aa6b2;        /* subtle text */
+      --accent:#ff8a3d;       /* orange accent */
+      --accent-2:#ff6b00;
+      --card-shadow: 0 10px 30px rgba(2,6,12,0.6);
+      --radius:14px;
+      --maxw:1200px;
+      font-family: Inter, "Segoe UI", Roboto, Arial, sans-serif;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0; background:linear-gradient(180deg, #0b0c0d 0%, #0f1113 100%);
+      color:#e6eef6; -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+    }
+
+    /* Header */
+    header{
+      position:sticky; top:0; z-index:60;
+      background:linear-gradient(180deg, rgba(10,11,12,0.95), rgba(10,11,12,0.85));
+      border-bottom:1px solid rgba(255,255,255,0.02);
+      backdrop-filter: blur(4px);
+    }
+    .nav-wrap{max-width:var(--maxw);margin:0 auto;padding:14px 18px;display:flex;align-items:center;justify-content:space-between;gap:12px}
+    .brand{display:flex;align-items:center;gap:10px;font-weight:800;font-size:18px}
+    .logo-box{width:40px;height:40px;border-radius:8px;background:var(--accent-2);display:flex;align-items:center;justify-content:center;font-weight:900;color:#111}
+    nav a{color:rgba(230,238,246,0.85);text-decoration:none;margin-left:18px;font-weight:600}
+    .cta-top{background:var(--accent);color:#081018;padding:10px 14px;border-radius:10px;font-weight:700;border:none;cursor:pointer}
+
+    /* Main container */
+    .wrap{max-width:var(--maxw);margin:28px auto;padding:0 18px}
+
+    /* Hero */
+    .hero{display:grid;grid-template-columns:1fr 420px;align-items:center;gap:22px;margin-top:18px}
+    .hero-card{background:transparent;padding:6px}
+    .eyebrow{display:inline-block;padding:6px 10px;border-radius:999px;background:rgba(255,138,61,0.08);color:var(--accent);font-weight:700;margin-bottom:14px}
+    h1{font-size:52px;line-height:1.02;margin:0;color:#fff;text-shadow:0 6px 18px rgba(0,0,0,0.6)}
+    h1 .accent{color:var(--accent);display:inline-block}
+    .lead{margin-top:16px;color:var(--muted);font-size:18px;max-width:640px}
+    .hero-cta{margin-top:22px;display:flex;gap:12px;flex-wrap:wrap}
+    .btn{background:var(--accent);color:#081018;padding:12px 18px;border-radius:12px;font-weight:800;border:none;cursor:pointer;box-shadow:0 10px 30px rgba(255,138,61,0.12)}
+    .btn.ghost{background:transparent;border:1px solid rgba(255,255,255,0.06);color:var(--muted);font-weight:700}
+
+    /* hero image panel */
+    .hero-image{border-radius:16px;overflow:hidden;box-shadow:var(--card-shadow);border:1px solid rgba(255,255,255,0.02);height:420px;background:#0b0c0d;display:flex;align-items:center;justify-content:center}
+    .hero-image img{width:100%;height:100%;object-fit:cover;display:block}
+
+    /* services section */
+    .services{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:28px}
+    .service{background:var(--panel);padding:18px;border-radius:12px;border:1px solid rgba(255,255,255,0.02)}
+    .service h3{margin:0 0 8px 0;color:#fff}
+    .service p{margin:0;color:var(--muted);line-height:1.5}
+
+    /* results table */
+    .results{margin-top:36px;background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:20px;border-radius:12px;border:1px solid rgba(255,255,255,0.02)}
+    .results h2{margin:0 0 12px 0;color:#fff}
+    table{width:100%;border-collapse:collapse;color:var(--muted);font-size:15px}
+    th,td{padding:12px 14px;text-align:left;border-bottom:1px solid rgba(255,255,255,0.02)}
+    th{color:var(--muted);font-weight:700}
+    td strong{color:var(--accent);font-weight:800}
+
+    /* process cards */
+    .process{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:28px}
+    .proc-card{background:var(--panel);padding:18px;border-radius:12px;border:1px solid rgba(255,255,255,0.02)}
+    .proc-card h4{margin:0 0 8px 0;color:#fff}
+    .proc-card p{margin:0;color:var(--muted)}
+
+    /* team/testimonials */
+    .team{display:flex;gap:18px;margin-top:28px;flex-wrap:wrap}
+    .person{background:var(--panel);padding:16px;border-radius:12px;width:240px;text-align:center;border:1px solid rgba(255,255,255,0.02)}
+    .person img{width:120px;height:120px;border-radius:999px;object-fit:cover;border:6px solid rgba(255,255,255,0.02);display:block;margin:0 auto 12px}
+
+    .testimonials{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:28px}
+    .testi{background:var(--panel);padding:18px;border-radius:12px;color:var(--muted);border:1px solid rgba(255,255,255,0.02)}
+    .testi strong{display:block;color:#fff;margin-top:10px}
+
+    /* CTA + contact */
+    .cta-band{background:linear-gradient(90deg,var(--accent),var(--accent-2));padding:36px;border-radius:12px;margin-top:28px;color:#081018;text-align:center}
+    .cta-band h3{margin:0 0 8px 0;font-size:28px;color:#081018}
+    .contact{margin-top:26px;background:var(--panel);padding:18px;border-radius:12px;display:grid;grid-template-columns:1fr 1fr;gap:12px;border:1px solid rgba(255,255,255,0.02)}
+    .contact input,.contact textarea{width:100%;padding:12px;border-radius:10px;border:1px solid rgba(255,255,255,0.03);background:transparent;color:#fff}
+    .contact .submit{grid-column:span 2;padding:12px;border-radius:10px;background:var(--accent);border:none;color:#081018;font-weight:800;cursor:pointer}
+
+    footer{margin-top:28px;color:var(--muted);text-align:center;padding:18px}
+
+    /* responsiveness */
+    @media(max-width:1040px){ .hero{grid-template-columns:1fr; } .hero-image{height:300px} .services{grid-template-columns:1fr} .process{grid-template-columns:repeat(2,1fr)} .testimonials{grid-template-columns:1fr} .contact{grid-template-columns:1fr} }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="nav-wrap">
+      <div class="brand">
+        <div class="logo-box">BS</div>
+        <div>BrandSpark</div>
+      </div>
+      <div style="display:flex;align-items:center;gap:14px">
+        <nav>
+          <a href="#about">About</a>
+          <a href="#services">Services</a>
+          <a href="#results">Results</a>
+          <a href="#process">Process</a>
+        </nav>
+        <button class="cta-top" onclick="window.location.href='#contact'">Get Started</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <!-- HERO -->
+    <section class="hero" id="home">
+      <div class="hero-card">
+        <div class="eyebrow">Performance marketing for interiors</div>
+        <h1>Transform Interior Design <span class="accent">Businesses with Data</span></h1>
+        <p class="lead">We run Meta & Google Ads and build creative social strategies that deliver measurable leads and revenue for interior design businesses and home brands.</p>
+        <div class="hero-cta">
+          <button class="btn" onclick="window.location.href='#contact'">Book Free Consultation</button>
+          <button class="btn ghost" onclick="window.location.href='#results'">See Results</button>
+        </div>
+
+        <div class="services" id="services" style="margin-top:24px">
+          <div class="service">
+            <h3>Meta Ads (FB & Instagram)</h3>
+            <p>Precision audience targeting, creatives, and conversion funnels to reach design clients where they spend time.</p>
+          </div>
+          <div class="service">
+            <h3>Google Ads</h3>
+            <p>Intent-driven search campaigns and landing pages to capture high-quality enquiries actively searching for interior services.</p>
+          </div>
+          <div class="service">
+            <h3>Social Media Mgmt</h3>
+            <p>Content calendars, short-form video, community growth and consistent brand storytelling for interior brands.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-image" aria-hidden="true">
+        <!-- using your uploaded screenshot as placeholder image -->
+        <img src="/mnt/data/Screenshot (90).png" alt="BrandSpark hero">
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" style="margin-top:36px">
+      <div style="display:flex;gap:18px;flex-wrap:wrap">
+        <div style="flex:1;min-width:320px">
+          <h2 style="margin:0;color:#fff">About BrandSpark</h2>
+          <p style="color:var(--muted);max-width:760px;margin-top:12px">We're a performance marketing agency specializing in interior design businesses. We combine data-driven ad strategies with creative content to deliver leads, lower CPL, and scale revenue across cities like Delhi, Pune, and Bangalore.</p>
+        </div>
+        <div style="width:280px;min-width:220px;align-self:center">
+          <div style="background:var(--panel);padding:12px;border-radius:12px;border:1px solid rgba(255,255,255,0.02)">
+            <div style="font-weight:800;color:#fff">Founder</div>
+            <div style="margin-top:8px;color:var(--muted)">Priya Sharma</div>
+            <div style="margin-top:12px"><strong style="color:var(--accent)">Call:</strong> <a href="tel:+917380311858" style="color:#fff;text-decoration:none">+91 73803 11858</a></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- RESULTS -->
+    <section id="results" style="margin-top:28px">
+      <div class="results">
+        <h2>Top Campaign Results</h2>
+        <p style="color:var(--muted);margin-top:6px">Our highest-performing campaigns across Delhi, Pune, and Bangalore (example metrics).</p>
+        <div style="margin-top:14px;overflow:auto">
+          <table>
+            <thead>
+              <tr><th>City</th><th>Ad Spend</th><th>Duration</th><th>Leads</th><th>CPL</th><th>Notes</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Delhi</td><td>₹1,20,000</td><td>45 days</td><td><strong style="color:var(--accent)">215</strong></td><td>₹558</td><td>Villa interiors — premium targeting</td></tr>
+              <tr><td>Pune</td><td>₹1,15,000</td><td>45 days</td><td><strong style="color:var(--accent)">208</strong></td><td>₹553</td><td>Gated communities — high conv rate</td></tr>
+              <tr><td>Bangalore</td><td>₹1,25,000</td><td>45 days</td><td><strong style="color:var(--accent)">225</strong></td><td>₹556</td><td>Corporate offices — B2B leads</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROCESS -->
+    <section id="process" style="margin-top:28px">
+      <h2 style="color:#fff">Our Process</h2>
+      <p style="color:var(--muted);max-width:760px">A simple 4-step approach we follow to generate high-quality leads for design businesses.</p>
+      <div class="process">
+        <div class="proc-card"><h4>Discovery Call</h4><p>Understand goals, audience, and unique selling points.</p></div>
+        <div class="proc-card"><h4>Strategy</h4><p>Audience maps, funnel, creatives, and landing plan.</p></div>
+        <div class="proc-card"><h4>Launch</h4><p>Deploy optimized ads across Meta & Google with tracking.</p></div>
+        <div class="proc-card"><h4>Optimize</h4><p>Continuous testing, scaling, and weekly reporting.</p></div>
+      </div>
+    </section>
+
+    <!-- TEAM -->
+    <section style="margin-top:28px">
+      <h2 style="color:#fff">Meet Our Team</h2>
+      <div class="team">
+        <div class="person"><img src="/mnt/data/Screenshot (95).png" alt="Priya"><div style="font-weight:700;margin-top:8px">Priya Sharma</div><div style="color:var(--muted)">Founder</div></div>
+        <div class="person"><img src="/mnt/data/Screenshot (97).png" alt="Team"><div style="font-weight:700;margin-top:8px">Rohit</div><div style="color:var(--muted)">Performance Lead</div></div>
+      </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section style="margin-top:28px">
+      <h2 style="color:#fff">What Our Clients Say</h2>
+      <div class="testimonials">
+        <div class="testi">"BrandSpark transformed our lead generation completely. We went from 20 leads to 150 qualified leads." <strong>— Rajesh Mehra, LuxInteriors</strong></div>
+        <div class="testi">"Professional, data-driven. Our CPL dropped 40% in the first month." <strong>— Sneha Kapoor, Design Studio</strong></div>
+        <div class="testi">"ROI improved 3x in 2 months." <strong>— Vikram Iyer, Modern Spaces</strong></div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-band" style="margin-top:28px">
+      <h3>Ready to Scale Your Interior Design Business?</h3>
+      <p style="margin:12px 0;color:#081018;opacity:0.95">Let's discuss how we can generate high-quality leads and measurable ROI.</p>
+      <button class="btn" onclick="window.location.href='#contact'">Book Your Free Consultation</button>
+    </section>
+
+    <!-- CONTACT (embedded Google Form) -->
+    <section id="contact" style="margin-top:28px">
+      <div class="contact">
+        <div>
+          <h3 style="margin:0 0 10px 0;color:#fff">Get In Touch</h3>
+          <p style="color:var(--muted);margin:0 0 10px 0">
+            Call: <a href="tel:+917380311858" style="color:#fff">+91 73803 11858</a>
+            • Email: <a href="mailto:official.brandsparks@gmail.com" style="color:#fff">official.brandsparks@gmail.com</a>
+          </p>
+        </div>
+
+        <!-- Embedded Google Form -->
+        <div style="grid-column:span 2">
+          <iframe
+            src="https://docs.google.com/forms/d/e/1FAIpQLSd-CPpUzhfhpMnMgMTTCmv55a4swLbkJrhF8j8sBpcrqRjFQQ/viewform?embedded=true"
+            width="100%" height="800" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      © <strong>BrandSpark</strong> — Performance marketing for interior businesses • Founder: Priya Sharma • 📞 +91 73803 11858
+    </footer>
+  </main>
+
+<script>
+  // basic interactivity: form handler + simple animations
+  // (Google Form iframe handles submissions; below small helpers)
+  // anchor smooth scroll
+  document.querySelectorAll('a[href^="#"]').forEach(a=>{
+    a.addEventListener('click', function(e){
+      const target = document.querySelector(this.getAttribute('href'));
+      if(target){ e.preventDefault(); target.scrollIntoView({behavior:'smooth', block:'start'}); }
+    });
+  });
+</script>
+</body>
+</html>
